@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Metric Producciones</title>
+	<link rel="shortcut icon" href="logos/ico.ico">
+	<link href="https://fonts.googleapis.com/css?family=Pontano+Sans|Lato" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+
+	<div class="bg">
+	</div>
+
+	<div class="menu">
+		<div class="logo">
+			M E T R I C
+			<p>Sistema de cotizaciones</p>
+			<a href="#"><i class="fa fa-bars" aria-hidden="true"></i></a>
+		</div>
+		<div class="nav">
+			<a href="#">Inicio</a>
+			<a href="#">Cotizaciones</a>
+			<a href="#">Eventos</a>	
+			<a href="#">Personal</a>
+			<a href="#">Clientes</a>
+			<a href="#">Herramientas</a>
+		</div>
+		<a href="#" class="back btn-red">Cerrar sesión</a>
+	</div>
+	
+	<div id="notifications" class="btn btn-green">
+		<p>Éxito! <i class="fa fa-check" aria-hidden="true"></i></p>
+	</div>
+
+	<script src="https://use.fontawesome.com/5144437903.js"></script>
+	<script
+	  src="https://code.jquery.com/jquery-3.2.1.min.js"
+	  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+	  crossorigin="anonymous">
+	</script>
+	<script type="text/javascript">
+		$(function(){
+		    $('.nav a').click(function(){
+		        $('.nav .active').removeClass('active'); // remove the class from the currently selected
+		        $(this).addClass('active'); // add the class to the newly clicked link
+		    });
+
+		    $('.logo a').click(function(){
+		    	$('.nav').css("opacity", "1");
+		    	$('.back').css("opacity", "1");
+		    	$('.menu').css("background", "rgba(28,28,28,0.7)");
+		    });
+
+		     $('.menu .nav a').click(function(){
+		    	$('.nav').css("opacity", "0");
+		    	$('.back').css("opacity", "0");
+		    	$('.menu').css("background", "transparent");
+		    });
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,201 @@
+body,
+html{
+	width: 100%;
+	height: 100%;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	font-family: 'Lato', sans-serif;
+}
+
+a,
+a:hover,
+a:link,
+a:active{
+	color: none;
+	text-decoration: none;
+}
+
+/*****Background*****/
+
+.bg{
+	height: 100%;
+	width: 100%;
+	background: url(../img/bg.jpg) center center no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.bg:before{
+	content:'';
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	background: -webkit-linear-gradient(rgba(28,28,28,1), rgba(28,28,28,0.6)); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(rgba(28,28,28,1), rgba(28,28,28,0.6)); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(rgba(28,28,28,1), rgba(28,28,28,0.6)); /* For Firefox 3.6 to 15 */
+	background-image: linear-gradient(to left, rgba(28,28,28,1), rgba(28,28,28,0.6)); /* Standard syntax */
+}
+
+/*****Menu*****/
+
+.menu{
+	border: 1px solid #333333;
+	padding: 10px;
+	position: fixed;
+	z-index: 10;
+	top: 0;
+	left: 0;
+	transition: 0.5s;
+	height: 100%;
+	text-align: center;
+	background: rgba(28,28,28,0.7);
+	color: #fff;
+	border: 0;
+}
+
+.menu .logo{
+	margin: 50px 40px;
+	font-size: 2em;
+}
+
+.menu .logo p{
+	margin: 10px 0;
+	font-size: 0.5em;
+}
+
+.menu .logo a{
+	color: #fff;
+	display: none;
+}
+
+.menu .nav a{
+	display: block;
+	transition: 0.3s ease;
+	padding: 14px 14px 14px 32px;
+	color: #fff;
+	transition: all 0.3s;
+	border: 0;
+	position: relative;
+}
+
+.menu .nav{
+	transition: all 0.3s;
+}
+
+.menu .nav a:after{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	width: 0%;
+	content: '';
+	color: transparent;
+	background: #aaa;
+	height: 1px;
+	transition: all 0.3s;
+}
+
+.menu .nav a:hover:after{
+	width: 100%;
+}
+
+.menu .nav .active:after{
+	width: 60%;
+}
+
+.menu .back{
+	bottom: 20px;
+	position: absolute;
+	border: 0;
+	width: 100%;
+	left: 0;
+	padding: 10px 0 10px 0;
+}
+
+/* iPhone 6 ----------- */
+	@media only screen 
+	  and (min-device-width: 375px) 
+	  and (max-device-width: 667px) 
+	  and (-webkit-min-device-pixel-ratio: 2) { 
+		.menu{
+			right: 0;
+			background: transparent;
+		}
+
+		.menu .logo{
+			margin: 10px auto;
+			font-size: 1.5em;
+			text-align: left;
+		}
+
+		.menu .logo p{
+			display: none;
+			float: left;
+		}
+
+		.menu .logo a{
+			display: block;
+			float: right;
+			margin: 0 10px;
+		}
+
+		.menu .nav,
+		.menu .back{
+			opacity: 0;
+		}
+	}
+
+/*****Buttons*****/
+
+.btn{
+	transition: all 0.4s;
+	padding: 8px 20px;
+	border-radius: 2px;
+	border: 0;
+}
+
+.btn-red{
+	background: #E53935;
+	color: #fff;
+}
+
+.btn-red:hover{
+	background: #C62828;
+}
+
+.btn-green{
+	background-color: #4CAF50;
+	color: #fff;
+}
+
+.btn-green:hover{
+	background: #46a049;
+}
+
+/*****Notifications*****/
+
+#notifications{
+	position: fixed;
+	top: 30px;
+	right: 20px;
+	z-index: 10;
+	font-size: 0.9em;
+}
+
+/* iPhone 6 ----------- */
+	@media only screen 
+	  and (min-device-width: 375px) 
+	  and (max-device-width: 667px) 
+	  and (-webkit-min-device-pixel-ratio: 2) { 
+		#notifications{
+			display: none;
+		}
+	}
