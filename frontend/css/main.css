@@ -361,3 +361,75 @@ a:active{
 			width: 100%;
 		}
 	}
+
+/*****Modal*****/
+
+.modal{
+	height: 100%;
+	width: 100%;
+	background: rgba(28,28,28,0.9);
+	display: block;
+	position: fixed;
+	z-index: 100;
+	top: 0;
+}
+
+.modal-content{
+	margin: 2% auto;
+	position: relative;
+	max-width: 600px;
+	background: #fff;
+	padding: 30px;
+	border-radius: 2px;
+	-webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.6s;
+    animation-name: animatetop;
+    animation-duration: 0.6s;
+    color: #1c1c1c;
+}
+
+.modal-close{
+	float: right;
+	border: 1px solid #1c1c1c;
+	padding: 5px;
+	border-radius: 2px;
+}
+
+.modal-close:hover{
+	cursor: pointer;
+}
+
+.modal-content input{
+	border: 0;
+	padding-top: 12px;
+	padding-left: 10px;
+	padding-bottom: 12px;
+	border: 1px solid #000;
+	margin-top: 40px;
+	border-radius: 2px;
+	outline: 0;
+}
+
+.modal-form{
+	margin: 40px auto;
+}
+
+.modal-content .input-50{
+	max-width: 150px;
+	padding-right: 60px;
+	margin-right: 30px;
+}
+
+.modal-content .input-100{
+	display: block;
+}
+
+.modal-content .submit{
+	margin: 50px auto;
+	display: block;
+	
+}
+
+.modal-name{
+	font-weight: bold;
+}
