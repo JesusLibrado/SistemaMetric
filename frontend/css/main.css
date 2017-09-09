@@ -368,7 +368,6 @@ a:active{
 	height: 100%;
 	width: 100%;
 	background: rgba(28,28,28,0.9);
-	display: block;
 	position: fixed;
 	z-index: 100;
 	top: 0;
@@ -422,6 +421,7 @@ a:active{
 
 .modal-content .input-100{
 	display: block;
+	width: 70%;
 }
 
 .modal-content .submit{
@@ -432,4 +432,16 @@ a:active{
 
 .modal-name{
 	font-weight: bold;
+}
+
+#agregarCotizacion{
+	display: none;
+}
+
+#agregarPersonal{
+	display: block;
+}
+
+#agregarCliente{
+	display: none;
 }
