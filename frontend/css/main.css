@@ -164,7 +164,7 @@ a:active{
 
 .content{
 	margin-top: 70px;
-	margin-left: 270px;
+	margin-left: 300px;
 	margin-right: 70px;
 	position: relative;
 	color: #fff;
@@ -244,6 +244,36 @@ a:active{
 			opacity: 0;
 		}
 	}
+
+/*****Hero*****/
+
+.hero{
+	width: 100%;
+	margin-top: 30px;
+	padding: 20px;
+}
+
+.hero-title{
+	font-size: 1.2em;
+	border-bottom: 1px solid #fff;
+}
+
+.hero-content{
+	margin: 30px auto;
+}
+
+.hero-element{
+	text-align: center;
+	padding: 20px;
+	max-width: 200px;
+	display: inline-grid;
+	margin-right: 20px;
+	border-radius: 2px;
+}
+
+.hero-id{
+	padding: 10px;
+}
 
 /*****Search box*****/
 
@@ -439,7 +469,7 @@ a:active{
 }
 
 #agregarPersonal{
-	display: block;
+	display: none;
 }
 
 #agregarCliente{
