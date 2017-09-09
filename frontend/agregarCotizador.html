@@ -20,83 +20,66 @@
 			<a href="#"><i class="fa fa-bars" aria-hidden="true"></i></a>
 		</div>
 		<div class="nav">
-			<a href="#" class="active">Inicio</a>
+			<a href="index.html">Inicio</a>
 			<a href="cotizaciones.html">Cotizaciones</a>
 			<a href="#">Eventos</a>	
-			<a href="personal.html">Personal</a>
-			<a href="clientes.html">Clientes</a>
-			<a href="cotizadores.html">Cotizadores</a>
+			<a href="personal.html" >Personal</a>
+			<a href="#">Clientes</a>
+			<a href="#" class="active">Cotizadores</a>
 			<a href="#">Herramientas</a>
 		</div>
 		<a href="#" class="back btn btn-red">Cerrar sesión</a>
 	</div>
 
+	<div class="search">
+		<i class="fa fa-search" aria-hidden="true"></i>
+		<input type="text" placeholder="buscar...">
+	</div>
+
 	<div class="content">
-		<div class="hero">
-			<div class="hero-title">
-				Proximas cotizaciones
+		<div class="box">
+			<div class="box-name">
+				<p>Miguel Allende</p>
 			</div>
-			<div class="hero-content">
-				<div class="hero-element">
-					<div class="hero-date">
-						Sabado, 9 de septiembre
-					</div>
-					<div class="hero-id">
-						9352
-					</div>
-				</div>
-				<div class="hero-element">
-					<div class="hero-date">
-						Domingo, 10 de septiembre
-					</div>
-					<div class="hero-id">
-						9343
-					</div>
-				</div>
-				<div class="hero-element">
-					<div class="hero-date">
-						Martes, 12 de septiembre
-					</div>
-					<div class="hero-id">
-						912378
-					</div>
-				</div>
+			<div class="box-content">
+				<p>Puebla</p>
 			</div>
 		</div>
-		<div class="hero">
-			<div class="hero-title">
-				Proximos eventos
+		<div class="box">
+			<div class="box-name">
+				<p>John Doe</p>
 			</div>
-			<div class="hero-content">
-				<div class="hero-element">
-					<div class="hero-date">
-						Sabado, 9 de septiembre
-					</div>
-					<div class="hero-id">
-						9352
-					</div>
-				</div>
-				<div class="hero-element">
-					<div class="hero-date">
-						Domingo, 10 de septiembre
-					</div>
-					<div class="hero-id">
-						9343
-					</div>
-				</div>
-				<div class="hero-element">
-					<div class="hero-date">
-						Martes, 12 de septiembre
-					</div>
-					<div class="hero-id">
-						912378
-					</div>
-				</div>
-			</div>		
+			<div class="box-content">
+				<p>CDMX</p>
+			</div>
 		</div>
 	</div>
+
+	<div class="modal">
+		<div class="modal-content">
+			<span class="modal-close">X</span>
+			<div class="modal-header">
+				Nuevo cotizador
+			</div>
+			<div class="modal-form">
+				<p>Id: 9876</p>
+				<input type="text" class="input-50" placeholder="Nombre">
+				<input type="email" class="input-50" placeholder="Correo">
+				<input type="password" class="input-50" placeholder="Contraseña">
+				<span class="submit">
+					<a href="#" class="btn-rectangle btn-green">Aceptar</a>
+				</span>
+				<!-- <p>Agregado por: <span class="modal-name">Miguel</span></p> -->
+			</div>
+		</div>
+	</div>
+
+	<div class="fixed-buttons">
+		<a href="#" class="small-fixed btn-circle btn-blue"><i class="fa fa-book" aria-hidden="true"></i></a>
+		<a href="#" class="big-fixed btn-circle btn-green"><i class="fa fa-plus" aria-hidden="true"></i></a>
+	</div>
 	
-	<div id="notifications" class="btn btn-green">
+	<div id="notifications" class="btn-rectangle btn-green">
 		<p>Éxito! <i class="fa fa-check" aria-hidden="true"></i></p>
 	</div>
 
@@ -119,13 +102,7 @@
 		    	$('.menu .nav').css("display", "block");
 		    });
 
-		    /*
-		    $('.menu .nav a').click(function(){
-		    	$('.nav').css("opacity", "0");
-		    	$('.back').css("opacity", "0");
-		    	$('.menu').css("background", "transparent");
-		    });
-		    */
+
 		});
 	</script>
 </body>
