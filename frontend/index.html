@@ -15,23 +15,80 @@
 
 	<div class="menu">
 		<div class="logo">
-			M E T R I C
+			 <span>M E T R I C</span>
 			<p>Sistema de cotizaciones</p>
 			<a href="#"><i class="fa fa-bars" aria-hidden="true"></i></a>
 		</div>
 		<div class="nav">
 			<a href="#" class="active">Inicio</a>
 			<a href="cotizaciones.html">Cotizaciones</a>
-			<a href="#">Eventos</a>
-			<a href="#">Clientes</a>
+			<a href="#">Eventos</a>	
 			<a href="#">Personal</a>
+			<a href="#">Clientes</a>
 			<a href="#">Herramientas</a>
 		</div>
 		<a href="#" class="back btn btn-red">Cerrar sesión</a>
 	</div>
 
 	<div class="content">
-		
+		<div class="hero">
+			<div class="hero-title">
+				Proximas cotizaciones
+			</div>
+			<div class="hero-element">
+				<div class="hero-date">
+					Sabado, 9 de septiembre
+				</div>
+				<div class="hero-id">
+					9352
+				</div>
+			</div>
+			<div class="hero-element">
+				<div class="hero-date">
+					Domingo, 10 de septiembre
+				</div>
+				<div class="hero-id">
+					9343
+				</div>
+			</div>
+			<div class="hero-element">
+				<div class="hero-date">
+					Martes, 12 de septiembre
+				</div>
+				<div class="hero-id">
+					912378
+				</div>
+			</div>
+		</div>
+		<div class="hero">
+			<div class="hero-title">
+				Proximos eventos
+			</div>
+			<div class="hero-element">
+				<div class="hero-date">
+					Sabado, 9 de septiembre
+				</div>
+				<div class="hero-id">
+					9352
+				</div>
+			</div>
+			<div class="hero-element">
+				<div class="hero-date">
+					Domingo, 10 de septiembre
+				</div>
+				<div class="hero-id">
+					9343
+				</div>
+			</div>
+			<div class="hero-element">
+				<div class="hero-date">
+					Martes, 12 de septiembre
+				</div>
+				<div class="hero-id">
+					912378
+				</div>
+			</div>
+		</div>
 	</div>
 	
 	<div id="notifications" class="btn btn-green">
@@ -52,9 +109,9 @@
 		    });
 
 		    $('.logo a').click(function(){
-		    	$('.nav').css("opacity", "1");
-		    	$('.back').css("opacity", "1");
-		    	$('.menu').css("background", "rgba(28,28,28,0.7)");
+		    	$('.menu').css("height", "100%");
+		    	$('.menu .back').css("display", "block");
+		    	$('.menu .nav').css("display", "block");
 		    });
 
 		    /*

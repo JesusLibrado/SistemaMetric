@@ -121,13 +121,23 @@ a:active{
 	@media (max-width:908px){ 
 		.menu{
 			right: 0;
-			background: transparent;
+			height: 60px;
+			background: rgba(28,28,28,0.9);
+		}
+
+		.menu .nav,
+		.menu .back{
+			display: none;
 		}
 
 		.menu .logo{
 			margin: 10px auto;
 			font-size: 1.6em;
 			text-align: left;
+		}
+
+		.menu .logo span{
+			margin-left: 20px;
 		}
 
 		.menu .logo p{
@@ -145,39 +155,49 @@ a:active{
 			padding-top: 26px;
 		}
 
-		.menu .nav,
 		.menu .back{
-			opacity: 0;
+			padding: 20px 0;
 		}
 	}
 
 /*****Content*****/
 
 .content{
-	margin: 50px 10px;
-	float: right;
+	margin-top: 70px;
+	margin-left: 270px;
+	margin-right: 70px;
 	position: relative;
-	padding: 20px;
-	border: 1px solid #fff;
+	color: #fff;
 }
 
 	@media (max-width:908px){
 		.content{
-			margin: 60px 20px 20px 20px;
-			position: relative;
+			margin: 100px auto 0 70px;
 		}
 	}
 
 /*****Buttons*****/
 
-.btn{
+.btn-rectangle,
+.btn-circle{
 	transition: all 0.4s;
-	padding: 8px 22px;
-	border-radius: 2px;
+	color: #fff;
 	border: 0;
+
 }
 
-.btn-red{
+.btn-rectangle{
+	padding: 8px 22px;
+	border-radius: 2px;
+}
+
+.btn-circle{
+	padding: 20px 25px;
+	border-radius: 50%;
+}
+
+.btn-red,
+.btn-red a{
 	background: #E53935;
 	color: #fff;
 }
@@ -186,7 +206,8 @@ a:active{
 	background: #C62828;
 }
 
-.btn-green{
+.btn-green,
+.btn-green a{
 	background-color: #4CAF50;
 	color: #fff;
 }
@@ -195,15 +216,26 @@ a:active{
 	background: #46a049;
 }
 
+.btn-blue,
+.btn-blue a{
+	background: #2196F3;
+	color: #fff;
+}
+
+.btn-blue:hover{
+	background: #1E88E5;
+}
+
 /*****Notifications*****/
 
 #notifications{
 	position: fixed;
-	top: 30px;
-	right: 20px;
-	z-index: 10;
+	top: 80px;
+	right: 10px;
+	z-index: 100;
 	font-size: 0.9em;
 	opacity: 0;
+	padding: 10px 30px;
 }
 
 /* Responsive ----------- */
@@ -212,4 +244,120 @@ a:active{
 			opacity: 0;
 		}
 	}
-		
+
+/*****Search box*****/
+
+.search{
+	position: fixed;
+	right: 10px;
+	top: 20px;
+	z-index: 10;
+	color: #fff;
+}
+
+.search input{
+	border: 0;
+	padding: 6px 0 6px 8px;
+	border-radius: 20px;
+	background: rgba(28,28,28,0.7);
+	border: 1px solid #fff;
+	color: #fff;
+	margin-left: 6px;
+	transition: all 0.4s;
+	font-size: 0.9em;
+}
+
+.search input:focus{
+	padding-right: 120px;
+	outline: 0;
+}
+
+/* Responsive ----------- */
+	@media (max-width: 908px){ 
+		.search{
+			top: 60px;
+			left: 0;
+			right: 0;
+			z-index: 5;
+		}
+
+		.search i{
+			float: right;
+			margin: 10px;
+			font-size: 1.1em;
+			color: #fff;
+		}
+
+		.search	input{
+			position: fixed;
+			padding: 10px;
+			padding-left: 10px;
+			border: 0;
+			font-size: 1.2em;
+			width: 100%;
+			border-radius: 2px;
+			background: #1c1c1c;
+			color: #fff;
+			margin: 0;
+		}
+
+		.search input:focus{
+			border-left: 18px solid #fff;
+		}
+	}
+
+/*****Fixed buttons*****/
+
+.fixed-buttons{
+	position: fixed;
+	right: 10px;
+	bottom: 10px;
+	text-align: center;
+}
+
+.fixed-buttons a{
+	display: table;
+	margin: 12px auto;
+}
+
+.big-fixed{
+	font-size: 1em;
+}
+
+.small-fixed{
+	font-size: 1em;
+	padding: 10px 14px;
+}
+
+/*****Boxes*****/
+
+.box{
+	color: #1c1c1c;
+	margin: 20px;
+	border-radius: 2px 2px 20px 2px;
+	float: right;
+	background: #fff;
+	text-align: center;
+}
+
+.box .box-name{
+	font-weight: bold;
+	padding: 10px;
+	background: #fff;
+	margin: 0;
+}
+
+.box .box-content{
+	padding: 10px;
+}
+
+.box .box-content p{
+	margin: 8px;
+}
+
+/* Responsive ----------- */
+	@media (max-width: 908px){ 
+		.box{
+			width: 100%;
+		}
+	}
