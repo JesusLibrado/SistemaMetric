@@ -69,10 +69,10 @@
 		         },
 		         success: function (response) {
 		            if(response == null) $(".msg").html("<p>Usuario no encontrado</p>");
-					else window.location.href = "http://35.184.229.37:8080";
+					else window.location.href = "/cotizaciones";
 		         },
 		         error: function (error) {
-		         	$(".msg").html("Usuario no encontrado"); 
+		         	$(".msg").html("Usuario no encontrado");
 		            console.log(error);
 		         }
 		     });
