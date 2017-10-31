@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Metric Producciones</title>
+	<link rel="shortcut icon" href="./logos/ico.ico">
+	<link href="https://fonts.googleapis.com/css?family=Pontano+Sans|Lato" rel="stylesheet">
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+			font-family: 'Lato', sans-serif;
+		}
+		.login{
+			max-width: 500px;
+			margin: 100px auto;
+			border: 1px solid #1c1c1c;
+			padding: 50px;
+			border-radius: 4px;
+		}
+		.login input{
+			padding: 10px;
+			outline: none;
+			border: 0;
+			border-bottom: 1px solid #1c1c1c;
+			width: 90%;
+			margin: 20px;
+			font-size: 1em;
+		}
+		.login a{
+			background-color: #4CAF50;
+			color: #fff;
+			padding: 15px 25px;
+			margin: 20px auto;
+			display: table;
+			border-radius: 4px;
+		}
+		.login a:hover{
+			cursor: pointer;
+			background: #46a049;
+		}
+	</style>
+</head>
+<body>
+	<div class="login">
+		<input type="text" id="usrName" placeholder="Usuario">
+		<input type="text" id="usrPwd" placeholder="Contraseña">
+		<a onclick="login()">Autenticar</a>
+		<span class="msg"></span>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+	<script type="text/javascript">
+		function login(){
+		  try
+		  {
+			 jQuery.ajax({
+		         type: "POST",
+		         url: "http://localhost:8126/authenticate",
+		         data: { 
+		         	"user" : $("#usrName").val(),
+		            "password" : $("#usrPwd").val()
+		         },
+		         dataType: "json",
+		         beforeSend: function(){
+		         	$(".msg").html("<p>Esperando respuesta...</p>");
+		         },
+		         success: function (response) {
+		            if(response == null) $(".msg").html("<p>Usuario no encontrado</p>");
+					else window.location.href = "http://35.184.229.37:8080";
+		         },
+		         error: function (error) {
+		         	$(".msg").html("Usuario no encontrado"); 
+		            console.log(error);
+		         }
+		     });
+		 }
+		 catch(myerror)
+		 {
+		  alert ("error en llamada : " + myerror);
+		 }
+
+		}
+	</script>
+</body>
+</html>
