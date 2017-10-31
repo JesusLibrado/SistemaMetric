@@ -2,7 +2,6 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const equipmentSchema = new Schema({
-	name: String,
 	category: String,
 	made: String,
 	model: String,
