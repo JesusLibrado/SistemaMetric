@@ -26,7 +26,7 @@ var port = 8126;
 app.post('/authenticate',
   	(req, res)=>{
 	  	console.log("authenticate... ");
-	    User.findOne({name: req.body.user, pwd: req.body.password}, (err, usr)=>{
+	    User.findOne({name: req.body.user, password: req.body.password}, (err, usr)=>{
 	    	console.log(usr, err);
 	    	if(err) res.send(err);
 	    	res.json(usr);

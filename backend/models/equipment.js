@@ -1,15 +1,18 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const equipmentSchema = new Schema({
+const toolSchema = new Schema({
+	id : Number,
 	category: String,
-	made: String,
+	type: String,
+	brand: String,
 	model: String,
-	per_day_cost: Number,
-	quantity_available: Number,
-	comments: String
+	pricePerDay: Number,
+	quantity: Number,
+	available: Number,
+	comment: String
 });
 
-const User = mongoose.model('equipment', equipmentSchema);
+const Tool = mongoose.model('tool', toolSchema);
 
-module.exports = User;
+module.exports = Tool;
