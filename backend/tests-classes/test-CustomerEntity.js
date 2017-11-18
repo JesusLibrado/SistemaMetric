@@ -1,6 +1,6 @@
 "use strict";
 
-var CustomerEntity = require('../test-classes/CustomerEntity');
+var CustomerEntity = require('../classes/CustomerEntity');
 
 var cus = new CustomerEntity();
 console.log(cus.toString());

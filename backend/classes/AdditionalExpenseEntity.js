@@ -11,4 +11,4 @@ class AdditionalExpenseEntity {
     }
 }
 
-modules.export = AdditionalExpenseEntity;
+module.exports = AdditionalExpenseEntity;
