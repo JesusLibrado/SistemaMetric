@@ -1,4 +1,4 @@
-var PersonnelEntity = require('../classes/PersonnelEntity');
+var PersonnelEntity = require('../classes/PersonnelEntity'); //You have to go out of the folder
 
 var e = new PersonnelEntity();
 e.id = 999;
