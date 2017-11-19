@@ -2,12 +2,17 @@ var mongoose = require('mongoose');
 
 var _db;
 
+var ipAddress = "35.184.229.37";
+var port = "27017";
+var systemName = "metric";
+
 module.exports = {
 	connectToServer: (callback) => {
-		mongoose.connect('mongodb://35.184.229.37:27017/metric',
+		mongoose.connect('mongodb://' + ipAddress + ':' + port + '/' + systemName,
 		{ useMongoClient: true },
 		(err, db) => {
 			_db = db;
+			
 			var db = mongoose.connection;
 			db.on('error', console.error.bind(console, 'connection error:'));
 			db.once('open', function() {
