@@ -1,16 +1,25 @@
-function create(tool, connection) {
-	var toolInstance = new Tool();
-	toolInstance.id = tool.id;
-	toolInstance.category = tool.category;
-	toolInstance.type = tool.type;
-	toolInstance.brand = tool.brand;
-	toolInstance.model = tool.model;
-	toolInstance.pricePerDay = tool.pricePerDay;
-	toolInstance.quantity = tool.quantity;
-	toolInstance.available = tool.available;
-	toolInstance.comment = tool.comment;
-	toolInstance.save();
+"use strict";
+
+var ToolEntity = require('../classes/ToolEntity');
+var Tool = require('../models/Tool');
+var mongoConnection = require( './MongoConnection' );
+
+module.exports = {
+	create(toolEntity) {
+		var tool = new Tool();
+		tool.id = toolEntity.id;
+		tool.category = toolEntity.category;
+		tool.type = toolEntity.type;
+		tool.brand = toolEntity.brand;
+		tool.model = toolEntity.model;
+		tool.pricePerDay = toolEntity.pricePerDay;
+		tool.quantity = toolEntity.quantity;
+		tool.available = toolEntity.available;
+		tool.comment = toolEntity.comment;
+		tool.save();
+	}
 }
+/*
 function get(id, connection) {
 	var q = Tool.find({	id : id});
 	tool = new ToolEntity();
@@ -58,3 +67,4 @@ function update(id, tool, connection) {
 function remove(id, connection) {
 	Tool.remove({id : id});
 }
+*/
