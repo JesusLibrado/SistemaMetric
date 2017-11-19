@@ -13,6 +13,5 @@ tool.pricePerDay = 123.5;
 tool.quantity = 1;
 tool.available = 1;
 tool.comment = "The cake is a lie!";
-
 ToolAPI.create(tool);
-console.log(CustomerAPI.get());
+//console.log(ToolAPI.get());

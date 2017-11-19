@@ -5,7 +5,7 @@ var Tool = require('../models/Tool');
 var mongoConnection = require( './MongoConnection' );
 
 module.exports = {
-	create(toolEntity) {
+	create : (toolEntity) => {
 		var tool = new Tool();
 		tool.id = toolEntity.id;
 		tool.category = toolEntity.category;
@@ -16,7 +16,13 @@ module.exports = {
 		tool.quantity = toolEntity.quantity;
 		tool.available = toolEntity.available;
 		tool.comment = toolEntity.comment;
-		tool.save();
+        mongoConnection.connectToServer(function(err) {
+            var db = mongoConnection.getDb();
+            db.collection('toolCollection').insert(tool);
+            mongoConnection.close();
+            if(err) console.log(err);
+            else 	console.log("saved! : " + tool.toString());
+        });
 	}
 }
 /*
