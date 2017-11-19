@@ -11,4 +11,5 @@ customer.phone = 2223334455;
 customer.rfc = "J_B4N4N4";
 customer.type = "Gato";
 
-CustomerAPI.create(customer);
+// CustomerAPI.create(customer);
+console.log(CustomerAPI.get());

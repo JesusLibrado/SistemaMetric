@@ -6,7 +6,7 @@ var mongoConnection = require( './MongoConnection' );
 
 module.exports = {
 
-    create(customerInstance) {
+    create: (customerInstance) => {
         var customer = new Customer();
         customer.id = customerInstance.id;
         customer.email = customerInstance.email;
@@ -20,21 +20,31 @@ module.exports = {
             db.collection('customers').insert(customer);
             mongoConnection.close();
         });
+    },
+
+    get: () => {
+        
+        var customers;
+
+        mongoConnection.connectToServer(function(err) {
+            var db = mongoConnection.getDb();
+            customers = db.collection('customers').findOne();
+            console.log(customers);
+            mongoConnection.close();
+        });
+
+        return customers;
     }
 
-    // get() {
+    // get: (id) => {
 
     // }
 
-    // get() {
+    // update: () => {
 
     // }
 
-    // update() {
-
-    // }
-
-    // delete() {
+    // delete: (id) => {
 
     // }
 };
