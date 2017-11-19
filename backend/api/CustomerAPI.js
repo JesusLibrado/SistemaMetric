@@ -17,7 +17,7 @@ module.exports = {
 
         mongoConnection.connectToServer(function(err) {
             var db = mongoConnection.getDb();
-            db.collection('customers').insert(customer);
+            db.collection('customerCollection').insert(customer);
             mongoConnection.close();
         });
     },
@@ -28,7 +28,7 @@ module.exports = {
 
         mongoConnection.connectToServer(function(err) {
             var db = mongoConnection.getDb();
-            customers = db.collection('customers').findOne();
+            customers = db.collection('customerCollection').findOne();
             console.log(customers);
             mongoConnection.close();
         });
